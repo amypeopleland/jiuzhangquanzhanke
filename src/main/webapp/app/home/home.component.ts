@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
     modalRef: NgbModalRef;
     classeNameNeedToReg: string;
 
+    //type script 构造函数
     constructor(
         private principal: Principal,
         private loginModalService: LoginModalService,
@@ -62,6 +63,7 @@ export class HomeComponent implements OnInit {
     }
 
     getAllCoursesWithTN() {
+        //subscribe 我要知道回来的是什么东西
         this.courseService.getCourseInfoWithTN().subscribe(curDto => {
             if (!curDto) {
                 this.coursesWithTN = [];

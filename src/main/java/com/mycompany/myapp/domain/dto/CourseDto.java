@@ -16,3 +16,4 @@ public class CourseDto {
 
     private long teacherId;
 }
+//对比course-dto.model.ts

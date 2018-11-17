@@ -29,10 +29,14 @@ public class CourseService {
     private UserService userService;
 
     public List<CourseDto> findAllCourses(){
+        //hybor 在这里， 泛型
         List<Course> courses= courseRepository.findAll();
+        //vcourses.add(new Course());
+        //CourseDto 显示给用户，因为不想把ID 暴露出去给别人看。
 
         List<CourseDto> courseDtos = new ArrayList<>();
 
+        //courses.stream().map...
         for(Course c : courses) {
             courseDtos.add(new CourseDto(c.getCourseName(), c.getCourseLocation(), c.getCourseContent(), c.getTeacherId()));
         }

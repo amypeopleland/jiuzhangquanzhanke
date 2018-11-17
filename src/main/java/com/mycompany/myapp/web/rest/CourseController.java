@@ -19,6 +19,7 @@ public class CourseController {
     @Autowired
     private CourseService courseService;
 
+    //MAP course service里面的url
     @GetMapping(path = "/api/course/findAllCourses", produces = "application/json")
     public HttpEntity<List<CourseDto>> findAllCourses(){
         List<CourseDto> allCourses = courseService.findAllCourses();
